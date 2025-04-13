@@ -1,14 +1,15 @@
-BookLib - A React Web Application
-This project, titled BookLib, is a web-based application developed using React.js and the Open Library API. It serves as a digital library interface where users can search for and explore a vast collection of books. By integrating Open Library’s public data, the application enables real-time book lookups, providing details such as titles, authors, publication years, and cover images.
+# BookLib - A React Web Application
 
-Key Features:
-Search for books in real-time from the Open Library database.
+**BookLib** is a web-based application built using **React.js** and the **Open Library API**. It acts as a digital library interface where users can search and explore a vast collection of books. By integrating Open Library’s public data, users can access real-time book details such as titles, authors, publication years, and cover images.
 
-Display book details like title, author, publication year, and cover image.
+## Key Features:
+- **Real-time book search** from the Open Library database.
+- Display book details including:
+  - Title
+  - Author
+  - Publication Year
+  - Cover Image
+- Clean, **user-friendly interface** for an enhanced browsing experience.
 
-Clean, user-friendly interface for an enhanced browsing experience.
-
-Built With:
-React.js: For building dynamic and interactive user interfaces.
-
-Open Library API: For fetching book data.
+## Built With:
+- **React.js**: A JavaScript library for building dynamic and interactive user interfaces.
