@@ -1,74 +1,125 @@
-.navbar{
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;700&display=swap');
+
+.navbar {
     padding: 1.8rem 0;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background: linear-gradient(135deg, #f1e6d6, #d5c1b0); /* Matching About Page */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+    border-radius: 25px;
 }
-.navbar-brand{
-    width: 90px;
-}
-.navbar-brand span{
-    margin-left: 2rem;
-}
-.brand-and-toggler{
-    width: 100%;
-}
-.navbar-content{
+
+.navbar-content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
-.navbar-toggler-btn{
-    transition: var(--transition);
-    z-index: 11;
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
-.navbar-collapse{
+
+.logo {
+    width: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+}
+
+.navbar-toggler-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon {
+    color: #4a4a4a;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menu-icon.active {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.navbar-collapse {
     position: fixed;
     right: 0;
     top: 0;
     z-index: 10;
-    background-color: var(--black-color);
+    background-color: #d5c1b0;
     height: 100%;
     width: 280px;
     display: flex;
     padding: 10rem 3rem 0 3rem;
-    transform: translatex(100%);
-    transition: var(--transition);
-}
-.show-navbar-collapse{
-    transform: translateX(0);
-}
-.nav-item{
-    margin-bottom: 1.4rem;
-}
-.nav-link{
-    transition: var(--transition);
-}
-.nav-link:hover{
-    color: var(--purple-color);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 25px;
 }
 
-@media screen and (min-width: 992px){
-    .navbar-collapse{
+.show-navbar-collapse {
+    transform: translateX(0);
+}
+
+.nav-item {
+    margin-bottom: 1.4rem;
+}
+
+.nav-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #8a5a44;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 992px) {
+    .navbar-collapse {
         position: relative;
         height: auto;
         padding: 0;
-        width: 100%;
-        background-color: transparent;
+        width: auto;
+        background: transparent;
         transform: translateX(0);
         justify-content: flex-end;
     }
-    .navbar-toggler-btn{
+
+    .navbar-toggler-btn {
         display: none;
     }
-    .nav-item{
+
+    .nav-item {
         margin-bottom: 0;
-        margin-left: 2.8rem;
+        margin-left: 2.5rem;
     }
-    .nav-link{
-        color: var(--black-color);
-        font-size: 1.7rem;
-        font-weight: 500!important;
-        opacity: 0.8;
+
+    .nav-link {
+        font-size: 1.5rem;
+        font-weight: 600;
     }
-    .navbar-nav{
+
+    .navbar-nav {
         display: flex;
     }
 }

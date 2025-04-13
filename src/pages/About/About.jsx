@@ -1,28 +1,52 @@
 import React from 'react';
 import "./About.css";
-import aboutImg from "../../images/about-img.jpg";
+import samhitaaImage from '../../images/samhitaa.jpeg';
+import saniyaImage from '../../images/saniya.jpeg';
+import anupriyaImage from '../../images/anupriya.jpeg';
 
-const About = () => {
+function About() {
   return (
     <section className='about'>
       <div className='container'>
-        <div className='section-title'>
-          <h2>About</h2>
+        <div className='section-header'>
+          <h2>LibSearch: Your Ultimate Book Finder</h2>
+          <p>Empowering book enthusiasts with seamless search capabilities</p>
         </div>
 
-        <div className='about-content grid'>
-          <div className='about-img'>
-            <img src = {aboutImg} alt = "" />
-          </div>
+        <div className='about-content'>
           <div className='about-text'>
-            <h2 className='about-title fs-26 ls-1'>About BookHub</h2>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos consequuntur vero commodi provident maiores, iusto atque corrupti voluptate vel sequi consectetur unde aliquam corporis saepe animi non, tempora reiciendis molestias sed laudantium dolores. Assumenda aperiam fuga quo voluptate commodi ullam aliquam expedita voluptas delectus.</p>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, possimus inventore eveniet atque voluptatibus repellendus aspernatur illo aliquam dignissimos illum. Commodi, porro omnis dolore amet neque modi quas eum!</p>
+            <h2 className='about-title'>Revolutionizing the Way You Discover Books</h2>
+            <p className='fs-17'>LibSearch is a dynamic book search engine created by three passionate students with a mission to simplify book discovery. By leveraging advanced algorithms and an extensive database, we ensure users find their desired books effortlessly.</p>
+            <p className='fs-17'>From academic resources to leisure reading, LibSearch offers a refined and intuitive browsing experience, making it easier than ever to locate and explore books across genres and disciplines.</p>
+            <p className='fs-17'>Join our journey in making knowledge accessible, efficient, and engaging for everyone.</p>
+          </div>
+          <div className='about-creators'>
+            <div className='creator-card'>
+              <div className='creator-image'>
+                <img src={samhitaaImage} alt="Samhitaa Saravanakumar" />
+              </div>
+              <h3>Samhitaa Saravanakumar</h3>
+              <p>Reg No: 23BCB0125</p>
+            </div>
+            <div className='creator-card'>
+              <div className='creator-image'>
+                <img src={saniyaImage} alt="Saniya Goyal" />
+              </div>
+              <h3>Saniya Goyal</h3>
+              <p>Reg No: 23BCE2126</p>
+            </div>
+            <div className='creator-card'>
+              <div className='creator-image'>
+                <img src={anupriyaImage} alt="Anupriya Singh" />
+              </div>
+              <h3>Anupriya Singh</h3>
+              <p>Reg No: 23BCE0652</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

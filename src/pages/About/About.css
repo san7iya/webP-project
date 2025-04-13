@@ -1,28 +1,111 @@
-.about{
-    padding: 3rem 0;
-}
-.about-content{
-    gap: 4rem;
-}
-.about-title{
-    margin: 1rem 0;
-}
-.about-img img{
-    max-width: 520px;
-}
-.about-text p{
-    margin: 1.8rem 0;
-    opacity: 0.8;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;700&display=swap');
+
+.about {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f1e6d6, #d5c1b0); /* Soft beige and light brown */
+    color: #333;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
 }
 
-@media screen and (min-width: 800px){
-    .about-content{
-        grid-template-columns: repeat(2, 1fr);
+.about-content {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif; /* Fancy but sleek font */
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+}
+
+.about-text {
+    font-size: 1.5rem;
+    color: #585858;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-creators {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.creator-card {
+    background: #f4f0eb; /* Light nude beige */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ddd; /* Soft frame around each card */
+    max-width: 280px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+
+.creator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.creator-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+    text-transform: capitalize;
+    font-family: 'Playfair Display', serif; /* Fancy but sleek font */
+}
+
+.creator-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.creator-image {
+    width: 150px; /* Increased width for larger image */
+    height: 200px; /* Taller image */
+    margin: 0 auto 1rem;
+    overflow: hidden; /* Crop the image that exceeds the container */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.creator-image img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Ensure the image covers the full container */
+    object-fit: cover; /* Crop the image to fill the container without distorting */
+}
+
+.creator-image:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+@media screen and (max-width: 800px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    .about-title{
-        margin-top: 0;
-    }
-    .about-img img{
-        margin-left: 0;
+    .about-creators {
+        flex-direction: column;
+        align-items: center;
     }
 }
